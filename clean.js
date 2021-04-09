@@ -56,7 +56,7 @@ const uniqueDate = function (list) {
             throw err
         }
     
-        const array = new Set(data)
+        const array = new Set(data.split('\r\n'))
 
         for (const item of list) {
             array.add(item)
