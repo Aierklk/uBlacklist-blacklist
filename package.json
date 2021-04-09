@@ -1,0 +1,23 @@
+{
+  "name": "ublacklist-blacklist",
+  "version": "1.0.0",
+  "description": "使用uBlacklist插件对域名进行屏蔽",
+  "main": "index.js",
+  "scripts": {
+    "start": "node clean.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aierklk/uBlacklist-blacklist.git"
+  },
+  "author": "Aierklk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aierklk/uBlacklist-blacklist/issues"
+  },
+  "homepage": "https://github.com/Aierklk/uBlacklist-blacklist#readme",
+  "dependencies": {
+    "tldjs": "^2.3.1"
+  }
+}
