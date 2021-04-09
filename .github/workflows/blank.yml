@@ -41,7 +41,7 @@ jobs:
         
       # commit
       - name: commit
-        run: git commit -m "auto update list" 
+        run: git commit -am "auto update list" 
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           
