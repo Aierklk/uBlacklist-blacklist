@@ -36,6 +36,9 @@ jobs:
       - name: update data
         run: npm run start
         
+      - run: git config --global user.email "aierklk@gmail.com"
+      - run: git config --global user.name "aierklk"
+        
       # commit
       - name: commit
         run: git commit -m "auto update list" 
