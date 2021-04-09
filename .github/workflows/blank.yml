@@ -35,3 +35,15 @@ jobs:
       # update data
       - name: update data
         run: npm run start
+        
+      # commit
+      - name: commit
+        run: git commit -m "auto update list" 
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          
+      # push
+      - name: push  
+        run: git push
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
