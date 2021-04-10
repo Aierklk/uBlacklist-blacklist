@@ -73,7 +73,7 @@ const exclude = function (item, isValid, hostname) {
         return true 
     }
 
-    if (item?.startsWith('@')) {
+    if (item.startsWith('@')) {
         return true
     }
 
