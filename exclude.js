@@ -1,0 +1,4 @@
+exports.excludeList = [
+    '.gov',
+    '.edu'
+]

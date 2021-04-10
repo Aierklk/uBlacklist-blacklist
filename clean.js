@@ -1,5 +1,6 @@
 const fs = require('fs')
 const tldjs = require('tldjs')
+const excludeList = require('./exclude').excludeList
 
 
 const head = '*://'
@@ -10,15 +11,13 @@ const charSet = 'utf8'
 const cacheFile = './cache.txt'
 const listFile = './blacklist.txt'
 
+const clearCacheFlag = true
+
 
 // 拼接数据
-const splic = function (value, isIp) {
+const splic = function (value) {
 
-    if (isIp) {
-        return head + value + tail
-    }
-
-    return head + '*.' + value + tail
+    return head + value + tail
 }
 
 
@@ -43,13 +42,13 @@ const writeData = function (list) {
             throw err
         } 
 
-        clearCache()
+        clearCacheFlag && clearCache()
     })
 }
 
 
 // 去重
-const uniqueDate = function (list) {
+const unique = function (list) {
 
     fs.readFile(listFile, charSet, (err, data) => {
         if (err) {
@@ -64,6 +63,28 @@ const uniqueDate = function (list) {
 
         writeData(Array.from(array).join('\r\n'))
     })
+}
+
+
+// 排除
+const exclude = function (item, isValid, hostname) {
+
+    if (!isValid || !hostname) {
+        return true 
+    }
+
+    if (item?.startsWith('@')) {
+        return true
+    }
+
+
+    for (const exclude of excludeList) {
+        if (hostname.includes(exclude)) {
+            return true
+        }
+    }
+
+    return false
 }
 
 
@@ -86,23 +107,35 @@ fs.readFile(cacheFile, charSet, (err, data) => {
         item = item.replace(tail, '')
 
         
-        const result = tldjs.parse(item)
+        let {
+            isValid,
+            isIp,
+            hostname
+        } = tldjs.parse(item)
 
-            
-        if (!result.isValid) {
-            continue 
+
+        if (exclude(item, isValid, hostname)) {
+            continue
         }
 
 
-        if (result.isIp) {
-            cleanList.add(splic(result.hostname, true))
-        } else {
-            cleanList.add(splic(result.domain))
-        }
+        const length = hostname.split('.').length
+
+        
+        ;(length === 2 && !isIp)
+            ? (hostname = '*.' + hostname) 
+            : null
+        
+        ;(hostname.startsWith('www') && length === 3)
+            ? (hostname = hostname.replace('www', '*'))
+            : null
+
+
+        cleanList.add(splic(hostname))
     }
 
 
     if (cleanList.size) {
-        uniqueDate(cleanList)
+        unique(cleanList)
     }
 })
