@@ -1269,3 +1269,13 @@
 *://wap.wowokc.com/*
 *://wap.atipan.com/*
 *://m.ikanchai.com/*
+*://*.debugease.com/*
+*://*.hovertree.com/*
+*://*.itakesoft.com/*
+*://*.soscw.com/*
+*://*.dale6.com/*
+*://*.qdmana.com/*
+*://*.weipxiu.com/*
+*://*.w3h5.com/*
+*://*.jianchenwangluo.com/*
+*://*.yggx.net/*
