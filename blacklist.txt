@@ -1274,3 +1274,17 @@
 *://*.w3h5.com/*
 *://*.jianchenwangluo.com/*
 *://*.yggx.net/*
+*://*.12dy.com/*
+*://m.jinse.com/*
+*://*.cdmana.com/*
+*://*.javamana.com/*
+*://*.boo-lab.it/*
+*://*.winemakersclub.it/*
+*://cbws.repairshopr763.site/*
+*://*.gmconlus.it/*
+*://*.jianshu.com/*
+*://*.sankaijc.com/*
+*://*.vpsman.net/*
+*://*.pharmagolfchallenge.it/*
+*://*.sitoreattivo.it/*
+*://*.ershicimi.com/*
