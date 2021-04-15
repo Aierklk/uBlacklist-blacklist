@@ -11,7 +11,7 @@ const charSet = 'utf8'
 const cacheFile = './cache.txt'
 const listFile = './blacklist.txt'
 
-const clearCacheFlag = true
+const cleanCacheFlag = true
 
 
 // 拼接数据
@@ -22,7 +22,7 @@ const splic = function (value) {
 
 
 // 清除缓存
-const clearCache = function () {
+const cleanCache = function () {
 
     fs.writeFile(cacheFile, '', charSet, (err) => {
 
@@ -42,7 +42,7 @@ const writeData = function (list) {
             throw err
         } 
 
-        clearCacheFlag && clearCache()
+        cleanCacheFlag && cleanCache()
     })
 }
 
@@ -51,6 +51,7 @@ const writeData = function (list) {
 const unique = function (list) {
 
     fs.readFile(listFile, charSet, (err, data) => {
+        
         if (err) {
             throw err
         }

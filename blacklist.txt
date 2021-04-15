@@ -148,7 +148,6 @@
 *://*.kspzj.com/*
 *://*.smwenku.com/*
 *://*.fuyingdq.com/*
-*://102.alibaba.com/*
 *://*.cctsuzhou.cn/*
 *://*.uxys.com/*
 *://*.jq22.com/*
@@ -170,7 +169,6 @@
 *://m.ihousetrade.net/*
 *://*.shouce.ren/*
 *://*.wanlimm.com/*
-*://cloud.tencent.com/*
 *://*.yilingsj.com/*
 *://*.zmingcx.com/*
 *://*.wzsky.net/*
@@ -727,9 +725,7 @@
 *://games.qq.com/*
 *://*.sijiyoumei.com/*
 *://*.gzkuaiermei.com/*
-*://cn.aliyun.com/*
 *://*.gz-guanglai.com/*
-*://*.163.com/*
 *://*.jxkbnm.com/*
 *://*.saveuhak.com/*
 *://*.yubaozheng.com/*
@@ -961,7 +957,6 @@
 *://*.zhishilin.com/*
 *://*.linuxidc.com/*
 *://*.droidyue.com/*
-*://*.aliyun.com/*
 *://cn.hostease.com/*
 *://*.kiiyi.com/*
 *://*.luyanan.com/*
