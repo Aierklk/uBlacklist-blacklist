@@ -1338,3 +1338,4 @@
 *://jelly.jd.com/article/*
 *://cn.horecapolis.info/*
 *://*.ityet.com/*
+*://huaweicloud.com/zhishi/*
