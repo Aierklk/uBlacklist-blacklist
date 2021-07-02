@@ -1,4 +1,5 @@
 exports.excludeList = [
     '.gov',
-    '.edu'
+    '.edu',
+    '.github.io'
 ]
