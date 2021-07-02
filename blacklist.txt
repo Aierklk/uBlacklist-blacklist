@@ -1339,3 +1339,17 @@
 *://cn.horecapolis.info/*
 *://*.ityet.com/*
 *://huaweicloud.com/zhishi/*
+*://program.xiaobenzi.com/*
+*://qunkong.com.cn/*
+*://*.jinqiaodanbao.com/*
+*://*.hebeiling.top/*
+*://codesearch.codelibs.org/*
+*://*.ourjs.com/*
+*://*.qishunwang.net/*
+*://*.shtml.net/*
+*://*.yunclass.net/*
+*://*.mamicode.com/*
+*://*.pinmou88.com/*
+*://*.biecuoliao.com/*
+*://huanghui8030.github.io/*
+*://bvxu.officeroom.pl/*
