@@ -1145,7 +1145,6 @@
 *://*.norrtaljezoo.com/*
 *://*.mystiquetanning.com/*
 *://news.sina.com.cn/*
-*://m.douban.com/*
 *://*.qbitai.com/*
 *://*.norarcoval.com/*
 *://*.timesgroup.cn/*
