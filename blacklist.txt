@@ -31,7 +31,6 @@
 *://zhinan.sogou.com/*
 *://*.codenong.com/*
 *://developer.51cto.com/*
-*://*.zhangxinxu.com/*
 *://*.enkj.com/*
 *://*.movervip.com/*
 *://*.codeleading.com/*
