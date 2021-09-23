@@ -1839,3 +1839,4 @@
 *://m.biancheng.net/*
 *://*.qqll.buzz/*
 *://*.dayuimage.com/*
+*://*.penzai.com/*
