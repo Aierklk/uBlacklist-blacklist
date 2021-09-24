@@ -1764,3 +1764,6 @@
 *://*.qhddns.com/*
 *://*.lrjydb.com/*
 *://*.gsyyq.com/*
+*://*.xfqc186.com/*
+*://*.8688news.com/*
+*://*.whxinqing.com/*
