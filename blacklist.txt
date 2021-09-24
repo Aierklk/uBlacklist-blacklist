@@ -1920,4 +1920,4 @@
 *://*.kyn5xo.cn/*
 *://*.zyncschool.com/*
 *://*.cdqingmu.com/*
-*://www/*
+*://*.*.buzz/*
