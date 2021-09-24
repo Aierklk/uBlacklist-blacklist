@@ -1756,3 +1756,6 @@
 *://*.zyncschool.com/*
 *://*.cdqingmu.com/*
 *://*.buzz/*
+*://*.hziho.com/*
+*://*.liubuyp.com/*
+*://*.mall0838.com/*
