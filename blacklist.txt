@@ -1759,3 +1759,8 @@
 *://*.hziho.com/*
 *://*.liubuyp.com/*
 *://*.mall0838.com/*
+*://*.paaqjs.com/*
+*://*.hongxitech.com/*
+*://*.qhddns.com/*
+*://*.lrjydb.com/*
+*://*.gsyyq.com/*
