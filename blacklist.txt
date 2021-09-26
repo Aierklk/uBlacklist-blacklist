@@ -1808,3 +1808,17 @@
 *://*.4000148590.com/*
 *://*.xiaozhishiku.com/*
 *://*.cdsphs.com/*
+*://*.jijisf.com/*
+*://*.qiangjiks.com/*
+*://*.huolicf.com/*
+*://*.czokzz.com/*
+*://*.dxxdwh.com/*
+*://*.mokegod.com/*
+*://*.wdzaixian.com/*
+*://*.njxiezilou.com/*
+*://*.kaba888.com/*
+*://*.freeguo.com/*
+*://*.8107778.com/*
+*://*.yxtad.com/*
+*://*.fridayboy.cn/*
+*://*.88832828.com/*
