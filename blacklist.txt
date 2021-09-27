@@ -1873,3 +1873,10 @@
 *://*.cnkeliji.com/*
 *://*.bslyxh.com/*
 *://*.jaibaba889.com/*
+*://*.wxcjjk.com/*
+*://*.cdbqgzdl.com/*
+*://*.evatsai.com/*
+*://*.oslins.cn/*
+*://*.shyjyg.com/*
+*://*.1w1y.com/*
+*://*.ouwl5b.cn/*
