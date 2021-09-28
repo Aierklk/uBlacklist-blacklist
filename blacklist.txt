@@ -2483,7 +2483,7 @@
 *://*.hnshualong.com/*
 *://*.women007.com/*
 *://*.0551qb.com/*
-*://*jjy9.com/*
+*://*.jjy9.com/*
 *://*.sosohelp.com/*
 *://*.zunyipifa.com/*
 *://*.yihuchuguo.com/*
