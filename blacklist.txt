@@ -19,7 +19,7 @@
 *://*.javazhiyin.com/*
 *://*.divcss5.com/*
 *://*.html.cn/*
-*://m.php.cn/*
+*://*.php.cn/*
 *://*.itpow.com/*
 *://*.caibaojian.com/*
 *://*.lagou.com/*
@@ -40,7 +40,7 @@
 *://*.codertw.com/*
 *://*.fly63.com/*
 *://*.itranslater.com/*
-*://m.365jz.com/*
+*://*.365jz.com/*
 *://zhlwish.blog.sohu.com/*
 *://ask.zol.com.cn/*
 *://*.ecomcn.com/*
@@ -68,7 +68,7 @@
 *://*.87994.com/*
 *://wiki.jikexueyuan.com/*
 *://tw.gitbook.net/*
-*://m.yisu.com/*
+*://*.yisu.com/*
 *://dotblogs.com.tw/*
 *://*.chinanews.com/*
 *://*.php.cn/*
@@ -2463,7 +2463,7 @@
 *://*.ygwlyq.com/*
 *://*.jlwdz.com/*
 *://*.zroto.com/*
-*://www.zqchome.com.cn/*
+*://*.zqchome.com.cn/*
 *://*.sdqingran.com/*
 *://*.ty52fo.cn/*
 *://*.niudu168.com/*
@@ -2483,7 +2483,7 @@
 *://*.hnshualong.com/*
 *://*.women007.com/*
 *://*.0551qb.com/*
-*://www.l.jjy9.com/*
+*://*jjy9.com/*
 *://*.sosohelp.com/*
 *://*.zunyipifa.com/*
 *://*.yihuchuguo.com/*
