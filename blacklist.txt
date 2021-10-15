@@ -710,7 +710,6 @@ title/.* - 小.(百科|知识)网/
 *://*.zswcn.com/*
 *://*.xleiso.com/*
 *://wap.fwt-zh.com/*
-*://*.cnbeta.com/*
 *://task.zbj.com/*
 *://k.vikacg.com/*
 *://wap.pets-yk.com/*
