@@ -1573,3 +1573,17 @@ title/.* - 小.(百科|知识)网/
 *://*.noobyard.com/*
 *://*.ape-ask.com/*
 *://*.freecodecamp.org/*
+*://*.mwwwguilinliwu.com/*
+*://*.grcamerada.com/*
+*://*.its304.com/*
+*://*.its401.com/*
+*://*.moe.am/*
+*://*.its201.com/*
+*://*.issueexplorer.com/*
+*://*.githubmemory.com/*
+*://*.imtqy.com/*
+*://*.wzszf.com/*
+*://*.its301.com/*
+*://*.52itzixun.com/*
+*://*.aoaiao.com/*
+*://*.pctantao.com/*
