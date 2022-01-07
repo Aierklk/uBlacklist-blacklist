@@ -1587,3 +1587,5 @@ title/.* - 小.(百科|知识)网/
 *://*.52itzixun.com/*
 *://*.aoaiao.com/*
 *://*.pctantao.com/*
+*://*.2abdwap.club/*
+*://*.abdwap1.me/*
