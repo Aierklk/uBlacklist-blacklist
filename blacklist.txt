@@ -1641,3 +1641,9 @@ title/.* - 小.(百科|知识)网/
 *://*.ffvab.com/*
 *://*.wptrn.com/*
 *://*.ydbaike.club/*
+
+*://*.985ys.com/*
+*://*.kvkft.com/*
+*://*.mdbsg.com/*
+*://*.amww.cc/*
+*://*.amhnn.com/*
