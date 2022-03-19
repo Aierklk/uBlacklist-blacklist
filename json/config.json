@@ -1,0 +1,8 @@
+{
+    "blacklistIndex": 0,
+    "cacheIndex": 0,
+    "needCleanCache": true,
+    "blackIP": true,
+    "mode": "hostname",
+    "inspectCount": 30
+}

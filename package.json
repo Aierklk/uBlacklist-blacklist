@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "使用uBlacklist插件对域名进行屏蔽",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node clean.js",
     "test": "echo \"Error: no test specified\" && exit 1"
