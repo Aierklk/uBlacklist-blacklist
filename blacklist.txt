@@ -1665,3 +1665,4 @@ title/.* - 小.(百科|知识)网/
 *://*.hacker66.me/*
 *://*.zztongyun.com/*
 *://*.tl80.cn/*
+*://*.code-examples.net/*
