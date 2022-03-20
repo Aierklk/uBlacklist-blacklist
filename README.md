@@ -32,6 +32,8 @@ https://raw.githubusercontent.com/Aierklk/uBlacklist-blacklist/main/blacklist.tx
 Chrome: https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe
 
 Safari: https://apps.apple.com/us/app/ublacklist-for-safari/id1547912640
+
+Firefox: https://addons.mozilla.org/en-US/firefox/addon/ublacklist/
 ## Features
 - [X] cache合并
 - [ ] issues合并 
