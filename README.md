@@ -7,11 +7,11 @@
 请注意，本名单仅是个人日常使用时的屏蔽域名记录，并不适合所有人。如有有问题请提issues。
 ## 使用
 ````javascript
-npm install 
+npm install
 npm run start
 ````
 ### 配置文件 `json/config.json`
-````json
+````javascript
 {
     "blacklistIndex": 0, // 屏蔽名单索引
     "cacheIndex": 0, // 缓存名单索引
