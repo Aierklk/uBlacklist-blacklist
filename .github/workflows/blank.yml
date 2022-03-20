@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: update data
+name: merge cache
 
 # Controls when the action will run. 
 on:
@@ -8,6 +8,8 @@ on:
   push:
     branches: 
       - main
+    paths:
+      - 'cache.txt'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -32,12 +34,13 @@ jobs:
       - name: Install dependencies 
         run: npm install
         
-      # update data
+      # run script
       - name: update data
         run: npm run start
-        
-      - run: git config --global user.email "aierklk@gmail.com"
-      - run: git config --global user.name "aierklk"
+      
+      # config git
+      - name: config git
+        run: git config --global user.email "aierklk@gmail.com"&&git config --global user.name "aierklk"
         
       # commit
       - name: commit
