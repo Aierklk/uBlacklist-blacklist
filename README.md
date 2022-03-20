@@ -36,5 +36,6 @@ Safari: https://apps.apple.com/us/app/ublacklist-for-safari/id1547912640
 Firefox: https://addons.mozilla.org/en-US/firefox/addon/ublacklist/
 ## Features
 - [X] cache合并
-- [ ] issues合并 
+- [ ] issues合并
 - [ ] issues剔除
+- [ ] blacklist检查

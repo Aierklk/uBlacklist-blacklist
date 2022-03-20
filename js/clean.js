@@ -24,7 +24,7 @@ const listFile = `${BASEPATH}blacklist.txt`
 /**
  * 读取配置文件
  */
- const readConfig = async function () {
+const readConfig = async function () {
     await readFile(configFile, true)
         .then(config => CONFIG = JSON.parse(config))
     
@@ -81,7 +81,7 @@ const exclude = function (parse) {
  * @param {string[]} list 
  * @returns {Promise<void>}
  */
- const unique = async function (list) {
+const unique = async function (list) {
     if (!list.size && !removeList.length) {
         return
     }
@@ -90,9 +90,11 @@ const exclude = function (parse) {
             const blacklist = data.split(BR)
             removeList.forEach((item1) => {
                 blacklist.forEach((item2, index) => {
-                    item2.includes(item1) &&
-                    blacklist.splice(index, 1) &&
-                    REMOVEDCOUNT++
+                    const result = item2.includes(item1)
+                    if (result) {
+                        blacklist.splice(index, 1)
+                        REMOVEDCOUNT++
+                    }
                 })
             })
 
@@ -108,7 +110,7 @@ const exclude = function (parse) {
  * 写入数据
  * @param {*} list 
  */
- const writeData = async function (list) {
+const writeData = async function (list) {
     return writeFile(listFile, list)
         .then(() => {
             CONFIG.needCleanCache && cleanCache()
@@ -142,9 +144,6 @@ const readCacheFile = async function () {
                 cleanList.add(splice(parse[CONFIG.mode]))
             }
 
-            return cleanList
-        })
-        .then(cleanList => {
             return unique(cleanList)
         })
 }
