@@ -1,54 +1,25 @@
-const fs = require('fs/promises')
 const tldjs = require('tldjs')
 const excludeList = require('./exclude')
+const {READERROR, WRITEERROR, readFile, writeFile} = require('./base')
 
 const HEAD = `*://*.`
 const TAIL = `/*`
 const SBR = `\r\n`
-const CHARTSET = 'utf-8'
 
 const BR = /\r?\n/
 const HN = /\*?\:?\/\/|\*\.|\/\*/g
 
 let TOTALCOUNT = 0
 let ADDEDCOUNT = 0
+let REMOVEDCOUNT = 0
 let CONFIG = {}
-const READERROR = []
-const WRITEERROR = []
+const removeList = []
 
-const BASEPATH = '../'
+const BASEPATH = `../`
 const JSONPATH = `${BASEPATH}json/`
 const configFile = `${JSONPATH}config.json`
 const cacheFile = `${BASEPATH}cache.txt`
 const listFile = `${BASEPATH}blacklist.txt`
-
-/**
- * 读取文件
- * @param {string} path 
- * @param {boolean} throwError
- * @returns {Promise<Buffer>}
- */
-const readFile = (path, throwError) => fs.readFile(path, CHARTSET).catch(error => {
-    READERROR.push(`read '${path}' error... ${error}`)
-    if (throwError) {
-        throw error
-    }
-})
-
-/**
- * 写入文件
- * @param {string} file 
- * @param {buffer} data 
- * @param {boolean} throwError
- * @returns {Promise<void>}
- */
-const writeFile = (file, data, throwError) => fs.writeFile(file, data, CHARTSET).catch(error => {
-    WRITEERROR.push(`write '${file}' error... ${error}`)
-    if (throwError) {
-        throw error
-    }
-})
-
 
 /**
  * 读取配置文件
@@ -61,27 +32,14 @@ const writeFile = (file, data, throwError) => fs.writeFile(file, data, CHARTSET)
 }
 
 /**
- * 写入配置
- * @param {string} key 
- * @param {string | number | boolean | Array} value 
- */
-const writeConfig = async function (key, value) {
-    const hasKey = CONFIG.hasOwnProperty(key)
-    if (hasKey) {
-        CONFIG[key] = value
-        await writeFile(configFile, CONFIG)
-        return true
-    } else {
-        return false
-    }
-}
-
-/**
  * 拼接数据
  * @param {string} value 
- * @returns {string}
+ * @returns {string | null}
  */
 const splice = function (value) {
+    if (!value) {
+        return null
+    }
     return HEAD + value + TAIL
 }
 
@@ -94,6 +52,7 @@ const cleanCache = function () {
 
 /**
  * 排除
+ * TODO: 更好的检查排除列表
  * @param {tldjs.parse} parse 
  * @returns {boolean} true 排除当前值，false 不排除当前值
  */
@@ -109,7 +68,6 @@ const exclude = function (parse) {
     }
 
     for (const exclude of excludeList) {
-        // TODO: 更好的检查排除列表
         if (parse.domain.includes(exclude)) {
             return true
         }
@@ -124,12 +82,21 @@ const exclude = function (parse) {
  * @returns {Promise<void>}
  */
  const unique = async function (list) {
-    if (!list.size) {
+    if (!list.size && !removeList.length) {
         return
     }
     return readFile(listFile)
         .then(data => {
-            const array = new Set(data.split(BR))
+            const blacklist = data.split(BR)
+            removeList.forEach((item1) => {
+                blacklist.forEach((item2, index) => {
+                    item2.includes(item1) &&
+                    blacklist.splice(index, 1) &&
+                    REMOVEDCOUNT++
+                })
+            })
+
+            const array = new Set(blacklist)
             const oldSize = array.size
             list.forEach(item => array.add(item))
             ADDEDCOUNT = array.size - oldSize
@@ -156,32 +123,23 @@ const readCacheFile = async function () {
         .then(data => {
             const cleanList = new Set()
             const array = data.split(BR)
-            const l = array.length
-            TOTALCOUNT = l
+            const l = TOTALCOUNT = array.length
 
             for (let i = 0; i < l; i++) {
 
-                let item = array[i]
+                const item = array[i].replace(HN, '')
+                const parse = tldjs.parse(item)
+
                 if (item.startsWith('@')) {
-                    // TODO: 检查blacklist中是否存在
+                    removeList.push(parse.hostname)
                     continue
                 }
-
-                item = item.replace(HN, '')
-                const parse = tldjs.parse(item)
 
                 if (exclude(parse)) {
                     continue
                 }
 
-                switch (CONFIG.mode) {
-                    case 'domain':
-                        cleanList.add(splice(parse.domain))
-                        break
-                    case 'hostname':
-                        cleanList.add(splice(parse.hostname))
-                        break
-                }
+                cleanList.add(splice(parse[CONFIG.mode]))
             }
 
             return cleanList
@@ -206,7 +164,7 @@ const init = async function (config) {
         .then(() => {
             console.assert(!READERROR.length, READERROR)
             console.assert(!WRITEERROR.length, WRITEERROR)
-            console.info(`本次数据量总计：${TOTALCOUNT}条，添加：${ADDEDCOUNT}条。`)
+            console.info(`本次数据量总计：${TOTALCOUNT}条。添加：${ADDEDCOUNT}条，移除：${REMOVEDCOUNT}条。`)
         })
 }
 
