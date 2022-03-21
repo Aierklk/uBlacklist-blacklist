@@ -28,7 +28,7 @@ jobs:
       - name: use node
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: '14.x'
           
       # install dependencies
       - name: Install dependencies 
