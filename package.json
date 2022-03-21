@@ -6,6 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "cd js && node clean.js",
+    "issues": "cd js && node issues.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
