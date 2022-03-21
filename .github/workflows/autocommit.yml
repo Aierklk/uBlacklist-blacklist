@@ -1,19 +1,49 @@
-# This is a basic workflow to help you get started with Actions
-
 name: auto commit
 
-# Controls when the workflow will run
-on:
-  issues:
-    types: [closed]
+on: issue_comment
+
 jobs:
-  unknow:
-    # The type of runner that the job will run on
+  autocommit:
+  
+    if: 
+      github.event.comment.author_association == 'OWNER' && 
+      github.event.comment.body == 'ok' &&
+      github.event.issue.labels[0].name == 'autocommit'
+      
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: checkinfo
-        if: github.event.issue.user.login == 'Aierklk' && github.event.issue.labels[0].name == 'autocommit'
+      
+      # check out main branch
+      - name: checkout
         uses: actions/checkout@main
+
+      # use node
+      - name: use node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      
+      # install dependencies
+      - name: Install dependencies 
+        run: npm install
         
+      # run script
+      - name: update data
+        run: npm run issues ${{github.event.issue.body}}
+      
+      # config git
+      - name: config git
+        run: git config --global user.email "aierklk@gmail.com"&&git config --global user.name "aierklk"
+        
+      # commit
+      - name: commit
+        run: git commit -am "auto update list" 
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          
+      # push
+      - name: push  
+        run: git push
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
