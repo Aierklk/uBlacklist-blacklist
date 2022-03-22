@@ -958,7 +958,6 @@ title/.* - 小.(百科|知识)网/
 *://*.debugcn.com/*
 *://*.codeqq.com/*
 *://*.ixigua.com/*
-*://*.support.huaweicloud.com/*
 *://*.233.com/*
 *://*.blog.iis7.com/*
 *://*.023dns.com/*
