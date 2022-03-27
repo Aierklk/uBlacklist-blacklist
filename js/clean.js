@@ -64,6 +64,7 @@ const cleanCache = function () {
  */
 const exclude = function (parse) {
     if (!parse.isValid) {
+        TOTALCOUNT--
         return true 
     }
 
@@ -170,7 +171,7 @@ const init = async function (config) {
         .then(() => {
             console.assert(!READERROR.length, READERROR)
             console.assert(!WRITEERROR.length, WRITEERROR)
-            console.info(`本次数据量总计：${TOTALCOUNT - 1}条。添加：${ADDEDCOUNT}条，移除：${REMOVEDCOUNT}条。`)
+            console.info(`本次数据量总计：${TOTALCOUNT}条。添加：${ADDEDCOUNT}条，移除：${REMOVEDCOUNT}条。`)
         })
 }
 
