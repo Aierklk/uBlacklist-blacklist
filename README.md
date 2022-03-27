@@ -15,7 +15,7 @@ npm install
 npm run start
 ````
 ### 方式2（推荐）：issue
-发起一个新的issue，在issue中列出想要添加或剔除的列表
+发起一个新的issue，Labels选择`autocommit`，在issue中列出想要添加或剔除的值，然后submit。
 例如
 
 ````text
@@ -24,9 +24,9 @@ comment：
 *://www.xxxx.com/*
 @*://*.yyyy.com/*
 ````
-提出issue后会我会进行检查，通过后我会回复ok，此时机器人会自动合并列表，合并成功后会关闭issue。 
+提出issue后会我会对值进行检查，通过后我会回复ok，此时机器人会自动合并到列表，合并成功后会关闭issue。 
 
-以@开头的值会从列表中剔除。
+##### 以@开头的值会从列表中剔除。
 
 ### 配置文件 `json/config.json`
 ````javascript
