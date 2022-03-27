@@ -59,4 +59,5 @@ Firefox: https://addons.mozilla.org/en-US/firefox/addon/ublacklist/
 - [X] cache合并
 - [X] issues合并
 - [X] issues剔除
+- [ ] issues支持携带特定配置参数
 - [ ] blacklist检查
