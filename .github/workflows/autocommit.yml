@@ -47,3 +47,11 @@ jobs:
         run: git push
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+         
+      # close this issue
+      - name: Close Issue
+        uses: peter-evans/close-issue@v2
+        with:
+          comment: |
+            自动提交成功。
+            自动关闭该issue。
