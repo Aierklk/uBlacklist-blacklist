@@ -1685,3 +1685,5 @@ title/.* - 小.(百科|知识)网/
 *://*.chi.centralbaptistquincyma.org/*
 *://*.daimaqa.com/*
 *://*.www.laitimes.com/*
+*://*.www.daimazhu.com/*
+*://*.www.manbcode.com/*
