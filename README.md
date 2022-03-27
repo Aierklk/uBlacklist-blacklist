@@ -11,7 +11,7 @@
 ````javascript
 git checkout xxx
 npm install
-# input any text to cache.text
+# input any text to cache.txt
 npm run start
 ````
 ### 方式2（推荐）：issue
