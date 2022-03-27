@@ -63,15 +63,15 @@ const cleanCache = function () {
  * @returns {boolean} true 排除当前值，false 不排除当前值
  */
 const exclude = function (parse) {
-    if (!parse.isValid) {
-        TOTALCOUNT--
-        return true 
-    }
-
     if (parse.isIp && CONFIG.blackIP) {
         return false
     } else if (parse.isIp && !CONFIG.blackIP) {
         return true
+    }
+
+    if (!parse.isValid || !parse.tldExists) {
+        TOTALCOUNT--
+        return true 
     }
 
     for (const exclude of excludeList) {
