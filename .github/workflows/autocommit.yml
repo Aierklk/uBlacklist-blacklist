@@ -31,3 +31,27 @@ jobs:
       # run script
       - name: update data
         run: npm run issues $'${{github.event.issue.body}}'
+
+      # config git
+      - name: config git
+        run: git config --global user.email "aierklk@gmail.com"&&git config --global user.name "aierklk"
+        
+      # commit
+      - name: commit
+        run: git commit -am "auto commit" 
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          
+      # push
+      - name: push  
+        run: git push
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+         
+      # close this issue
+      - name: Close Issue
+        uses: peter-evans/close-issue@v2
+        with:
+          comment: |
+            自动提交成功。
+            自动关闭该issue。
