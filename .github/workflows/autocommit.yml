@@ -28,9 +28,13 @@ jobs:
       - name: Install dependencies 
         run: npm install
         
+      # commit to cache
+      - name: update cache data
+        run: npm run issues $'${{github.event.issue.body}}'
+        
       # run script
       - name: update data
-        run: npm run issues $'${{github.event.issue.body}}'
+        run: npm run start
 
       # config git
       - name: config git
@@ -53,5 +57,4 @@ jobs:
         uses: peter-evans/close-issue@v2
         with:
           comment: |
-            自动提交成功。
-            自动关闭该issue。
+            自动提交成功，关闭该issue。
