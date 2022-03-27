@@ -1684,3 +1684,4 @@ title/.* - 小.(百科|知识)网/
 *://*.m.studyofnet.com/*
 *://*.chi.centralbaptistquincyma.org/*
 *://*.daimaqa.com/*
+*://*.www.laitimes.com/*
