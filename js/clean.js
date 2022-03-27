@@ -34,12 +34,18 @@ const readConfig = async function () {
 /**
  * 拼接数据
  * @param {string} value 
+ * @param {string} requireURI 
  * @returns {string | null}
  */
-const splice = function (value) {
+const splice = function (value, requireURI) {
     if (!value) {
         return null
     }
+
+    if (CONFIG.reserveRequireURI) {
+        value += requireURI
+    }
+
     return HEAD + value + TAIL
 }
 
@@ -108,7 +114,7 @@ const unique = async function (list) {
 
 /**
  * 写入数据
- * @param {*} list 
+ * @param {*} list
  */
 const writeData = async function (list) {
     return writeFile(listFile, list)
@@ -131,6 +137,7 @@ const readCacheFile = async function () {
 
                 const item = array[i].replace(HN, '')
                 const parse = tldjs.parse(item)
+                const requireURI = item.replace(parse.hostname, '')
 
                 if (item.startsWith('@')) {
                     removeList.push(parse.hostname)
@@ -141,7 +148,7 @@ const readCacheFile = async function () {
                     continue
                 }
 
-                cleanList.add(splice(parse[CONFIG.mode]))
+                cleanList.add(splice(parse[CONFIG.mode], requireURI))
             }
 
             return unique(cleanList)
@@ -163,7 +170,7 @@ const init = async function (config) {
         .then(() => {
             console.assert(!READERROR.length, READERROR)
             console.assert(!WRITEERROR.length, WRITEERROR)
-            console.info(`本次数据量总计：${TOTALCOUNT}条。添加：${ADDEDCOUNT}条，移除：${REMOVEDCOUNT}条。`)
+            console.info(`本次数据量总计：${TOTALCOUNT - 1}条。添加：${ADDEDCOUNT}条，移除：${REMOVEDCOUNT}条。`)
         })
 }
 

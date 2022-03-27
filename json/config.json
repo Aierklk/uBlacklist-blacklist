@@ -2,6 +2,7 @@
     "blacklistIndex": 0,
     "cacheIndex": 0,
     "needCleanCache": true,
+    "saveRequireURI": true,
     "blackIP": true,
     "mode": "hostname",
     "inspectCount": 30

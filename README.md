@@ -16,6 +16,7 @@ npm run start
     "blacklistIndex": 0, // 屏蔽名单索引
     "cacheIndex": 0, // 缓存名单索引
     "needCleanCache": true, // 清理缓存文件
+    "reserveRequireURI": true, // 保留requireURI
     "blackIP": true, // 屏蔽IP
     "mode": "hostname", // 模式 'hostname' | 'domain'
     "inspectCount": 30 // 检查次数
