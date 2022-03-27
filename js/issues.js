@@ -1,5 +1,8 @@
-const {readFile, writeFile} = require('./base')
+const {writeFile} = require('./base')
 
-const cloneList = process.argv[2]
+const list = process.argv[2]
 
-console.info(cloneList)
+const BASEPATH = `../`
+const cacheFile = `${BASEPATH}cache.txt`
+
+writeFile(cacheFile, list.join(''), true)
