@@ -5,11 +5,29 @@
 屏蔽域名列表
 
 请注意，本名单仅是个人日常使用时的屏蔽域名记录，并不适合所有人。如有有问题请提issues。
-## 使用
+
+## 贡献列表
+### 方式1：pull request
 ````javascript
+git checkout xxx
 npm install
+# input any text to cache.text
 npm run start
 ````
+### 方式2（推荐）：issue
+发起一个新的issue，在issue中列出想要添加或剔除的列表
+例如
+
+````text
+title: any text
+comment：
+*://www.xxxx.com/*
+@*://*.yyyy.com/*
+````
+提出issue后会我会进行检查，通过后我会回复ok，此时机器人会自动合并列表，合并成功后会关闭issue。 
+
+以@开头的值会从列表中剔除。
+
 ### 配置文件 `json/config.json`
 ````javascript
 {
@@ -29,14 +47,16 @@ npm run start
 
 ## 订阅地址
 https://raw.githubusercontent.com/Aierklk/uBlacklist-blacklist/main/blacklist.txt
+
 ## 插件地址
 Chrome: https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe
 
 Safari: https://apps.apple.com/us/app/ublacklist-for-safari/id1547912640
 
 Firefox: https://addons.mozilla.org/en-US/firefox/addon/ublacklist/
+
 ## Features
 - [X] cache合并
-- [ ] issues合并
-- [ ] issues剔除
+- [X] issues合并
+- [X] issues剔除
 - [ ] blacklist检查
