@@ -1687,3 +1687,8 @@ title/.* - 小.(百科|知识)网/
 *://*.www.laitimes.com/*
 *://*.www.daimazhu.com/*
 *://*.www.manbcode.com/*
+*://*.www.zgxue.com/*
+*://*.www.u19.cn/*
+*://*.qa.icopy.site/*
+*://*.www.lmlphp.com/*
+*://*.www.hellocxy.com/*
