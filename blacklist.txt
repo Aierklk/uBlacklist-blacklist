@@ -151,7 +151,6 @@ title/.* - 小.(百科|知识)网/
 *://*.gmz66.com/*
 *://*.4133.cc/*
 *://*.vipcn.com/*
-*://*.iqiyi.com/*
 *://*.pai-hang-bang.com/*
 *://*.pr.akdfj.com/*
 *://*.liangshunet.com/*
