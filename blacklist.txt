@@ -1719,3 +1719,14 @@ title/.* - 小.(百科|知识)网/
 *://*.www.proyy.com/*
 *://*.45.76.17.132/*
 *://*.m.cnjita.com/*
+*://*.www.superweb999.com/*
+*://*.www.sole-verde.com/*
+*://*.www.ytso.com/*
+*://*.outofmemory.cn/*
+*://*.www.pcppw.com/*
+*://*.gardaseepanorama.de/*
+*://*.ittone.ma/*
+*://*.arkanhospitals.com/*
+*://*.vj04.com/*
+*://*.www.apude.com/*
+*://*.www.it1946.com/*
