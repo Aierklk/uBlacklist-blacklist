@@ -2295,3 +2295,5 @@ title/.* - 小.(百科|知识)网/
 *://*.www.ipcc.ch/*
 *://*.www.newetop.com/*
 *://*.assets.south-plus.org/*
+*://*/en/collections/vendors?q=*
+*://*/collections/vendors?q=*
